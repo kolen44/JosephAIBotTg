@@ -1,6 +1,6 @@
 {
-	"name": "server",
-	"version": "1.0.0",
+	"name": "Joseph telegram bot",
+	"version": "testnet",
 	"description": "",
 	"main": "index.js",
 	"type": "module",
@@ -9,11 +9,12 @@
 		"dev": "nodemon ./src/main.js"
 	},
 	"keywords": [],
-	"author": "",
+	"author": "Ilya Sukhan",
 	"license": "ISC",
 	"dependencies": {
 		"@notionhq/client": "^2.2.14",
 		"config": "^3.3.11",
+		"esm": "^3.2.25",
 		"nodemon": "^3.0.3",
 		"openai": "^4.28.0",
 		"telegraf": "^4.15.3"
