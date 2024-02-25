@@ -1,37 +1,31 @@
-import Scene from 'telegraf'
+const { Telegraf, session, Markup } = require('telegraf')
+const { message } = require('telegraf/filters')
+const { Scenes } = require('telegraf')
 
-export class SceneGenerator {
-	GenAgeScene() {
-		const age = new Scene('age')
-		age.enter(async ctx => {
-			await ctx.reply('Hello! Ты вошел в сцену общения укажи возраст')
-		})
-		age.on('text', async ctx => {
-			const currAge = Number(ctx.message.text)
-			if (currAge && currAge > 0) {
-				await ctx.reply('Thanks for respond')
-				ctx.scene.enter('name')
-			} else {
-				await ctx.reply('Bro... укажи реальный возраст!')
-				ctx.scene.reenter()
-			}
-		})
-		age.on('message', ctx => ctx.reply('Мне нужен твой возраст...'))
-		return age
+module.exports.freeScene = new Scenes.WizardScene(
+	'CONTACT_DATA_WIZARD_SCENE_ID', // first argument is Scene_ID, same as for BaseScene
+	ctx => {
+		ctx.reply('Давайте для начала познакомимся . Как Вас зовут?')
+		ctx.wizard.state.contactData = {}
+		return ctx.wizard.next()
+	},
+	ctx => {
+		// validation example
+		if (ctx.message.text.length < 2) {
+			ctx.reply(`Не обманывайте . Введите Ваше настоящее имя`)
+			return
+		}
+		ctx.wizard.state.contactData.fio = ctx.message.text
+		check(ctx)
+		ctx.reply(`Какой ваш вес ${ctx.message.text}?`)
+		return ctx.wizard.next()
+	},
+	async ctx => {
+		ctx.wizard.state.contactData.weight = ctx.message.text.replace('кг', '')
+		ctx.reply(
+			'Введите вашу спортивную цель и можем приступать к созданию плана...'
+		)
+		//await mySendContactDataMomentBeforeErase(ctx.wizard.state.contactData)
+		return ctx.scene.leave()
 	}
-	GenNameScene() {
-		const name = new Scene('name')
-		name.enter(ctx => ctx.reply('Как тебя зовут'))
-		name.on('text', async ctx => {
-			const name = ctx.message.text
-			if (name) {
-				ctx.reply('Благодарю за ввод имени,' + name)
-				await ctx.scene.leave()
-			} else {
-				ctx.reply('Я так и не понял как тебя зовут...')
-				scene.reenter()
-			}
-		})
-		return name
-	}
-}
+)
