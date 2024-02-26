@@ -49,7 +49,7 @@
 <img src="https://github.com/kolen44/JosephAIBotTg/assets/126617855/4be77d85-b13e-49b2-a2a4-a21499c78de3" alt="Logo" width="300" height="330">
 </div>
 
-The bot was created using the OPENAY API, prompts are generated using prompt engineering. With the help of many clarifying questions, the bot generates a training plan and nutrition plan uniquely and as accurately as possible for a specific person.
+The bot was created using the OPENAI API, prompts are generated using prompt engineering. With the help of many clarifying questions, the bot generates a training plan and nutrition plan uniquely and as accurately as possible for a specific person.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
