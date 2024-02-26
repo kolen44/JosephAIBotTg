@@ -33,7 +33,7 @@
   <p align="center">
     Telegram bot for your training!
     <br />
-    <a href="https://github.com/kolen44/JosephAIBotTg/server"><strong>Explore the backend »</strong></a>
+    <a href="https://github.com/kolen44/JosephAIBotTg/tree/main/server"><strong>Explore the backend »</strong></a>
     <br />
     <br />
     ·
