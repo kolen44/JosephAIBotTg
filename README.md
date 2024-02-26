@@ -51,7 +51,6 @@
 
 The bot was created using the OPENAI API, prompts are generated using prompt engineering. With the help of many clarifying questions, the bot generates a training plan and nutrition plan uniquely and as accurately as possible for a specific person.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
@@ -62,7 +61,6 @@ The project was made using:
 
 - <img src="https://miro.medium.com/v2/resize:fit:1200/1*xdo0UBpyszvD7-7EH4TkIA.png" alt="Nodejs" width="200" height="100">
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
@@ -97,7 +95,6 @@ _Below is an example of how you can instruct your audience on installing and set
    const OPENAI_TOKEN = 'ENTER YOUR API'
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 
@@ -139,7 +136,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## Contact
 
-Ilya - <a href='t.me/IlyaWini'>Telegram</a> - vlodimirz981@gmail.com
+Ilya - <a href='https://t.me/IlyaWini'>Telegram</a> - vlodimirz981@gmail.com
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
