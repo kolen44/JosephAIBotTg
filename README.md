@@ -36,11 +36,9 @@
     <a href="https://github.com/kolen44/JosephAIBotTg/server"><strong>Explore the backend »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/kolen44/JosephAIBotTg/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
   </p>
 </div>
 
@@ -57,7 +55,7 @@ The bot was created using the OPENAY API, prompts are generated using prompt eng
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+The project was made using:
 
 - <img src="https://github.com/kolen44/JosephAIBotTg/assets/126617855/1c110000-1ae9-4748-b9d3-0799dfaa7930" alt="OpenAI" width="200" height="100">
 - <img src="https://raw.githubusercontent.com/pbardov/telegraf/master/docs/header.png" alt="Telegraf" width="200" height="100">
