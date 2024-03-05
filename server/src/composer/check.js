@@ -6,7 +6,6 @@ module.exports = Composer.action('check', async ctx => {
 		const updateId = ctx.chat.id
 		//Функция работает для тг груп и супергруп если бот является администратором
 		const member = await ctx.telegram.getChatMember(channel, updateId)
-		console.log(member)
 		if (
 			member.status === 'member' ||
 			member.status === 'administrator' ||

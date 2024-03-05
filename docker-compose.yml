@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  server:
+    build: server/
+    volumes:
+      - ./server/src:/app/src
+    command: npm run dev
+  frontend:
+    build: frontend/
+    expose:
+      - '5173'
+    ports:
+      - '8080:5000'
+    command: npm run build
+    volumes:
+      - ./frontend/src:/app/src

@@ -1,4 +1,4 @@
-const { Scenes } = require('telegraf')
+const { Scenes, Markup } = require('telegraf')
 const ChatGPT = require('../../chatgpt')
 
 function greetingScene() {
@@ -43,7 +43,12 @@ function greetingScene() {
 				ctx.wizard.state.firstDialog.someInfo,
 				ctx.wizard.state.firstDialog.goal
 			)
-			await ctx.reply(response)
+			await ctx.reply(
+				response,
+				Markup.inlineKeyboard([
+					Markup.button.callback('Хочу другой план', 'other'),
+				])
+			)
 			return ctx.scene.leave()
 		}
 	)

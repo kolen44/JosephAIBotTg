@@ -8,6 +8,9 @@ const checkSubscribe = require('./composer/check.js')
 const bot = new Telegraf(config.get('TELEGRAM_TOKEN'), {
 	handlerTimeout: Infinity,
 })
+bot.action('other', ctx => {
+	ctx.wizard.stepsctx.wizard.cursor
+})
 bot.use(checkSubscribe)
 bot.use(session())
 bot.use(stage.middleware())
