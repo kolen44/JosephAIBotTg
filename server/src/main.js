@@ -5,6 +5,7 @@ const { Scenes } = require("telegraf")
 const { stage } = require("./scenes/index.js")
 const checkSubscribe = require("./composer/check.js")
 const { handlePayment, preCheckoutQuery, successfulPayment } = require("./payment.js")
+require("./database/config/connect.js")
 
 const bot = new Telegraf(config.get("TELEGRAM_TOKEN"), {
     handlerTimeout: Infinity,
